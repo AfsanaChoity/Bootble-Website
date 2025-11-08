@@ -1,15 +1,18 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import {  Josefin_Sans, Gabarito } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const josefinSans = Josefin_Sans({
+      subsets: ['latin'], 
+      display: 'swap', 
+      variable: '--font-josefin-sans', 
+    });
+
+const gabarito = Gabarito({
+      subsets: ['latin'], 
+      display: 'swap', 
+      variable: '--font-gabarito',
+    });
 
 export const metadata = {
   title: "Create Next App",
@@ -20,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${josefinSans.variable} ${gabarito.variable} antialiased`}
       >
         {children}
       </body>

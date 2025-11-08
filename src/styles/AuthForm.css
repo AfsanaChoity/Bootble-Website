@@ -1,0 +1,32 @@
+.ant-form-item .ant-form-item-label >label{
+    font-family: Josefin Sans;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.ant-input-outlined:hover{
+    border-color: black !important;
+}
+
+.ant-input-outlined:focus,
+.ant-input-outlined:focus-within {
+    border-color: black !important;
+    outline: none !important;
+}
+
+@media screen and (min-width: 430px) {
+  .ant-otp {
+    padding-inline: 0px;
+  }
+  
+
+  .ant-otp.ant-otp-lg .ant-otp-input {
+    padding: 14px;
+  }
+
+}
+
+
+
+
+
