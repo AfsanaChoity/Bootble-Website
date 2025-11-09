@@ -1,0 +1,79 @@
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+}
+
+.statsCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.metricValue {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.metricLabel {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+.circularProgress {
+  width: 120px;
+  height: 120px;
+}
+
+.barChart {
+  height: 150px;
+  margin-top: 1rem;
+}
+
+.heartRateChart {
+  height: 100px;
+  margin-top: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.workoutSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.workoutIcon {
+  width: 24px;
+  height: 24px;
+  color: #FF6B6B;
+}
+
+.waterProgress {
+  color: #4ECDC4;
+}
+
+.heartRate {
+  color: #FF6B6B;
+}
+
+.sleepChart {
+  color: #45B7D1;
+}

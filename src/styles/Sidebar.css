@@ -1,0 +1,7 @@
+.ant-drawer .ant-drawer-close {
+    color: gray;
+}
+
+.ant-drawer .ant-drawer-header{
+        border-bottom: 1px solid rgb(216, 215, 215)
+}
