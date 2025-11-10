@@ -48,8 +48,8 @@ export default function Sidebar({ open, onClose }) {
 
             {/* for large screen */}
             <div className='hidden lg:block '>
-                <div className='flex flex-col  h-[80vh] justify-between font-cabin font-semibold bg-white rounded-[20px] px-20'>
-                    <ul className='whitespace-nowrap space-y-10  pt-10'>
+                <div className='flex flex-col py-20  justify-between font-cabin font-semibold bg-white rounded-[20px] px-20'>
+                    <ul className='whitespace-nowrap space-y-10  '>
 
                         {
                             menuItems.map((item) => {

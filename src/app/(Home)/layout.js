@@ -8,6 +8,8 @@ import Image from "node_modules/next/image";
 import user from '@/assets/images/user.png'
 import { CiSearch } from "react-icons/ci";
 import { IoNotificationsCircle } from "react-icons/io5";
+import chatbotIcon from '@/assets/icons/chatbot.svg'
+import Link from "node_modules/next/link";
 
 const josefinSans = Josefin_Sans({
     subsets: ['latin'],
@@ -51,7 +53,9 @@ export default function RootLayout({ children }) {
                    <div className="flex justify-between w-full">
                      {/* user */}
                     <div className='flex items-center gap-2'>
+                        <Link href="/settings">
                         <Image src={user} alt='user' className='w-14 lg:w-20 rounded-full' />
+                        </Link>
                         <div className='lg:space-y-2'>
                             <h2 className='font-josefin-sans font-semibold text-xl lg:text-2xl'>Good Morning Alex!</h2>
                             <p className='font-josefin-sans font-medium text-gray-500  lg:text-xl'>Track your health with Bootble</p>
@@ -77,11 +81,18 @@ export default function RootLayout({ children }) {
                 </div>
 
 
-                <div className=" flex lg:gap-20 2xl:gap-40 px-4 md:px-10 lg:px-6 xl:px-16 pt-10  ">
+                <div className=" flex flex-col md:flex-row lg:gap-10 2xl:gap-20 px-4 md:px-10 lg:px-6 xl:px-16 pt-10 pb-4 ">
                     <Sidebar open={open} onClose={closeDrawer} />
 
                     <main className="  flex-1">{children}</main>
+
+                    {/* chatbot Icon */}
+                    <div className="flex items-end">
+                    <Image src={chatbotIcon} alt="icon" />
                 </div>
+                </div>
+
+                
             </body>
         </html>
     );
