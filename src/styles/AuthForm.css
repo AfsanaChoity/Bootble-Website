@@ -4,12 +4,15 @@
     font-weight: 600;
 }
 
-.ant-input-outlined:hover{
+.ant-input-outlined:hover,
+.ant-picker-outlined:hover {
     border-color: black !important;
 }
 
 .ant-input-outlined:focus,
-.ant-input-outlined:focus-within {
+.ant-input-outlined:focus-within,
+.ant-picker-outlined:focus,
+.ant-picker-outlined:focus-within {
     border-color: black !important;
     outline: none !important;
 }
