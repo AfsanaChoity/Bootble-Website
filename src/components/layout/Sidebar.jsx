@@ -3,9 +3,6 @@
 import React, { useState } from 'react';
 import { Button, Drawer } from 'antd';
 import { usePathname, useRouter } from 'node_modules/next/navigation';
-// import { useDispatch } from 'react-redux';
-// import { logoutUser } from '@/reduxToolkit/auth/userSlice';
-// import logoutIcon from '@/assets/icons/logout.svg'
 import Image from 'node_modules/next/image';
 import '@/styles/Sidebar.css'
 import Link from 'node_modules/next/link';
@@ -19,10 +16,10 @@ import wellness from '@/assets/icons/wellness.svg'
 
 const menuItems = [
     { id: 1, icon: homeIcon, text: 'Home', href: '/' },
-    { id: 2, icon: fitness, text: '', href: '/fitness' },
-    { id: 3, icon: nutrition, text: '', href: '/nutrition' },
-    { id: 4, icon: yoga, text: '', href: '/yoga' },
-    { id: 5, icon: wellness, text: '', href: '/wellness' },
+    { id: 2, icon: fitness, text: 'Fitness', href: '/fitness' },
+    { id: 3, icon: nutrition, text: 'Health Info', href: '/health-info' },
+    { id: 4, icon: yoga, text: 'Meditation ', href: '/meditation' },
+    { id: 5, icon: wellness, text: 'Wellness ', href: '/wellness' },
 
 ];
 
@@ -30,25 +27,18 @@ const menuItems = [
 export default function Sidebar({ open, onClose }) {
 
     const router = useRouter();
-    // const dispatch = useDispatch();
     const pathname = usePathname();
 
-    // const handleLogout = () => {
-
-    //     const payload = false;
-    //     dispatch(logoutUser(payload));
-    //     router.push('/');
-    // };
-
+ 
 
     return (
         <div className=' '>
 
            
 
-            {/* for large screen */}
+            {/* for large screen */}          
             <div className='hidden lg:block '>
-                <div className='flex flex-col py-20  justify-between font-cabin font-semibold bg-white rounded-[20px] px-20'>
+                <div className='flex flex-col py-20  justify-between font-cabin font-semibold bg-white rounded-[20px] px-20 min-h-[80vh]'>
                     <ul className='whitespace-nowrap space-y-10  '>
 
                         {
@@ -62,7 +52,13 @@ export default function Sidebar({ open, onClose }) {
                                             className=" !px-4 !py-2 ">
                                             <Link href={item.href} className='flex text-2xl font-semibold items-center   '>
                                                 <Image src={item.icon} alt='icon' className='w-10' />
-                                                {item.text}
+                                               {
+                                                isActive && (
+                                                    <span className='pl-2'>
+                                                         {item.text}
+                                                    </span>
+                                                )
+                                               }
                                             </Link>
                                         </ButtonBase>
 
@@ -73,18 +69,7 @@ export default function Sidebar({ open, onClose }) {
                         }
                     </ul>
 
-                    {/* <div className=''>
-
-                        <ButtonBase
-                            TouchRippleProps={{ style: { color: '#CCA556' } }}
-                            className=" !px-4 !py-2 ">
-                            <button  className='cursor-pointer flex items-center gap-2 text-[#CCA556] '>
-                                {/* <Image src={logoutIcon} alt="icon" /> */}
-                    {/* Log Out
-                            </button>
-
-                        </ButtonBase>
-                    </div> */}
+                    
                 </div>
             </div>
 
@@ -120,7 +105,11 @@ export default function Sidebar({ open, onClose }) {
                                                     className={` ${isActive ? 'py-1 px-10 !bg-[#12103008]  rounded-full' : ''} flex text-xl font-semibold items-center`}
                                                 >
                                                     <Image src={item.icon} alt='icon' className='w-8' />
-                                                    <span className='text-[#121030]'>{item.text}</span>
+                                                    {
+                                                        isActive && (
+                                                            <span className='text-[#121030] pl-2'>{item.text}</span>
+                                                        )
+                                                    }
                                                 </Link>
 
                                             </ButtonBase>
@@ -130,18 +119,7 @@ export default function Sidebar({ open, onClose }) {
                             }
                         </ul>
 
-                        {/* <div className=''>
-                            <ButtonBase
-                                TouchRippleProps={{ style: { color: '#CCA556' } }}
-                                className=" !px-4 !py-2 ">
-                                <button  className='cursor-pointer flex items-center gap-2 text-[#CCA556] '>
-                                    
-                                    Log Out
-                                </button>
-
-                            </ButtonBase>
-
-                        </div> */}
+                        
                     </div>
                 </Drawer>
             </div>

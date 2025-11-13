@@ -65,13 +65,15 @@ export default function RootLayout({ children }) {
                     {/* search + notofication icons */}
                     <div className="flex gap-1 items-center">
                         {/* search */}
-                        <div className="bg-white w-10 h-10 flex items-center justify-center rounded-full text-xl ">
+                        {/* <div className="bg-white w-10 h-10 flex items-center justify-center rounded-full text-xl ">
                             <CiSearch />
-                        </div>
+                        </div> */}
 
                         {/* notification */}
                         <div>
+                            <Link href="/notifications">
                             <IoNotificationsCircle className='w-12 h-12'/>
+                            </Link>
                         </div>
                     </div>
 
@@ -84,11 +86,13 @@ export default function RootLayout({ children }) {
                 <div className=" flex flex-col md:flex-row lg:gap-10 2xl:gap-20 px-4 md:px-10 lg:px-6 xl:px-16 pt-10 pb-4 ">
                     <Sidebar open={open} onClose={closeDrawer} />
 
-                    <main className="  flex-1">{children}</main>
+                    <main className=" flex-1">{children}</main>
 
                     {/* chatbot Icon */}
                     <div className="flex items-end">
+                    <Link href="/chat-with-your-assistant">
                     <Image src={chatbotIcon} alt="icon" />
+                    </Link>
                 </div>
                 </div>
 

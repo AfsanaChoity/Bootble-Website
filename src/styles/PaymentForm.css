@@ -1,0 +1,36 @@
+ .ant-input {
+          background-color: #f3f4f6 !important;
+          border: none !important;
+          height: 48px !important;
+          border-radius: 0.5rem !important;
+        }
+        
+        .ant-input:focus,
+        .ant-input-focused {
+          background-color: #f3f4f6 !important;
+          box-shadow: none !important;
+        }
+
+        .ant-select .ant-select-selector {
+          background-color: #f3f4f6 !important;
+          border: none !important;
+          height: 48px !important;
+          border-radius: 0.5rem !important;
+          padding: 8px 11px !important;
+        }
+
+        .ant-select-focused .ant-select-selector {
+          box-shadow: none !important;
+        }
+
+        .ant-radio-wrapper {
+          font-size: 16px;
+        }
+
+        .ant-checkbox-wrapper {
+          align-items: flex-start;
+        }
+
+        .ant-checkbox {
+          margin-top: 2px;
+        }

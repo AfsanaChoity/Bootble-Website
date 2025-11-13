@@ -5,34 +5,28 @@ import Heading from "@/UI/Heading";
 import Paragraph from "@/UI/Paragraph";
 import UserDailyReport from "@/components/Shared/UserDailyReport";
 import CaloryCard from "@/components/Shared/CaloryCard";
+import SocialShareCard from "@/components/Shared/SocialShareCard";
 
-export default function Home() {
+export default function CommunityPage() {
   return (
    
 
     <div>
       {/* calory card */}
-      <div className="pb-4 xl:w-[60%]">
+      {/* <div className="pb-4 2xl:w-[60%]">
           <CaloryCard />
-      </div>
+      </div> */}
 
 
       <div className="grid 2xl:grid-cols-5 gap-4">
-     <div className="2xl:col-span-3">
+     <div className="2xl:col-span-3 space-y-4">
+        <CaloryCard />
        <UserDailyReport />
      </div>
 
       {/* 2nd col */}
      <div className="2xl:col-span-2 ">
-       <div className="bg-white p-8 rounded-[20px] shadow-xl h-full">
-        <Heading text="AI"/>
-        <Paragraph text="Hi, I am here to help you. "/>
-        <div className="flex justify-center">
-
-          <Image src={AI} alt="AI"/>
-
-        </div>
-      </div>
+      <SocialShareCard />
      </div>
     </div>
     </div>

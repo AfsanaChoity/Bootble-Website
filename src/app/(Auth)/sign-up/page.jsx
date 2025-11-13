@@ -114,21 +114,7 @@ const SignUpForm = () => {
         <Input.Password size='large' prefix={<LockOutlined />} placeholder='********'/>
       </Form.Item>
 
-      {/* <Form.Item
-        name="agreement"
-        valuePropName="checked"
-        rules={[
-          {
-            validator: (_, value) =>
-              value ? Promise.resolve() : Promise.reject(new Error('Should accept agreement')),
-          },
-        ]}
-        {...tailFormItemLayout}
-      >
-        <Checkbox>
-          I have read the <a href="">agreement</a>
-        </Checkbox>
-      </Form.Item> */}
+     
 
       {/* Button */}
       <Form.Item className='!mt-8  '>
