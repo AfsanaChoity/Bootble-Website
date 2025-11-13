@@ -75,7 +75,7 @@ const ResetPasswordForm = () => {
                 {/* Button */}
                 <Form.Item className='  '>
                     
-                    <AuthBtn text="Save" />
+                   <Link href="/sign-in"> <AuthBtn text="Save" /></Link>
                     
                 </Form.Item>
             </Form>
