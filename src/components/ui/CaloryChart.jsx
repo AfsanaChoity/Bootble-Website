@@ -7,7 +7,7 @@ const CaloryChart = () => {
     { day: 'M', value: 2200 },
     { day: 'T', value: 2000 },
     { day: 'W', value: 2000 },
-    { day: 'T', value: 1900 },
+    { day: 'Th', value: 1900 },
     { day: 'F', value: 1850 },
     { day: 'Sa', value: 1800 },
     { day: 'S', value: 1800 },
