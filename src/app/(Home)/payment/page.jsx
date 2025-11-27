@@ -183,7 +183,7 @@ const PaymentForm = () => {
         {/* Submit Button */}
         <div className="flex justify-end">
          
-          <AuthBtn text="Pay Rs. 000.00£"/>
+          <AuthBtn text="Pay £ 000.00"/>
         </div>
       </div>
 
