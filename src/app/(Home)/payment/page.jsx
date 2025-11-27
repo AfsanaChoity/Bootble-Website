@@ -102,15 +102,15 @@ const PaymentForm = () => {
             <Radio value="credit-card" className="text-base font-medium">
               Credit Card
             </Radio>
-            <Radio value="paypal" className="text-base font-medium   ">
+            <Radio value="stripe" className="text-base font-medium   ">
               {/* <Image src={paypal} alt='icon'/> */}
               Stripe
             </Radio>
-            <Radio value="paypal" className="text-base font-medium  ">
+            <Radio value="applePay" className="text-base font-medium  ">
               {/* <Image src={paypal} alt='icon'/> */}
               Apple Pay
             </Radio>
-            <Radio value="paypal" className="text-base font-medium   ">
+            <Radio value="googlePay" className="text-base font-medium   ">
               {/* <Image src={paypal} alt='icon'/> */}
               Google Pay
             </Radio>
@@ -183,7 +183,7 @@ const PaymentForm = () => {
         {/* Submit Button */}
         <div className="flex justify-end">
          
-          <AuthBtn text="Pay Rs. 000.00"/>
+          <AuthBtn text="Pay Rs. 000.00£"/>
         </div>
       </div>
 

@@ -7,9 +7,9 @@ import Link from "node_modules/next/link";
 import React from "react";
 
 const plans = [
-    { id: 1, title: "Free Plan", price: "$0/Month", emoji: "🧾" },
-    { id: 2, title: "Monthly", price: "$0/Month", emoji: "🏅" },
-    { id: 3, title: "Yearly", price: "$0/Month", emoji: "🏆" },
+    { id: 1, title: "Free Plan", price: "0/Month", emoji: "🧾" },
+    { id: 2, title: "Monthly", price: "0/Month", emoji: "🏅" },
+    { id: 3, title: "Yearly", price: "0/Month", emoji: "🏆" },
 ];
 
 export default function SubscriptionPanel() {
@@ -34,7 +34,7 @@ export default function SubscriptionPanel() {
 
                                 <div>
                                     <div className="text-xl font-josefin-sans font-semibold  text-[#3F3F3F]">{p.title}</div>
-                                    <div className="text-lg font-josefin-sans font-semibold">{p.price}</div>
+                                    <div className="text-lg font-josefin-sans font-semibold">`£{p.price}`</div>
                                 </div>
                             </div>
 
